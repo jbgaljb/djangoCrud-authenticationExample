@@ -9,3 +9,13 @@ class Product(models.Model):
  
     def __str__(self):
            return self.desc
+    
+
+class Student(models.Model):
+    email = models.CharField(max_length=50,null=True,blank=True)
+    age = models.DecimalField(max_digits=4,decimal_places=2)
+    createdTime=models.DateTimeField(auto_now_add=True)
+    fields =['email','age']
+ 
+    def __str__(self):
+           return self.email
